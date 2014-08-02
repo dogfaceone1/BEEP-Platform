@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xml:lang="en-US" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rootRule" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#Drive"/>
+        <tag> out.Dir = rules.Drive;out.CMD = "Drive";</tag>
+      </item>
+      <item>
+        <ruleref uri="#Steer"/>
+        <tag>out.Dir = rules.Steer; out.CMD = "Steer";</tag>
+      </item>
+      <item>
+        <ruleref uri="#Stop"/>
+        <tag>out.CMD = "Stop";</tag>
+      </item>
+    </one-of>
+  </rule>
+
+
+  <rule id="Stop">
+    <item repeat="0-1">
+      <ruleref uri="#names"/>
+    </item>
+    <item> stop </item>  
+  </rule>
+  <rule id="names">
+    <one-of>
+      <item> Beep </item>
+    </one-of>
+  </rule>
+  <rule id="Drive">
+    <ruleref uri="#names"/>
+    <one-of>
+      <item> drive </item>
+      <item> go </item>
+    </one-of>
+    <ruleref uri="#Ddir" />
+    <tag> out = rules.Ddir</tag>
+  </rule>
+  <rule id="Steer">
+    <ruleref uri="#names"/>
+    <one-of>
+      <item> turn </item>
+      <item> steer </item>
+    </one-of>
+    <ruleref uri="#Sdir" />
+    <tag> out = rules.Sdir</tag>
+  </rule>
+
+  <rule id="Sdir">
+    <one-of>
+      <item>left <tag> out = "Left";</tag> </item>
+      <item>
+        right <tag> out = "Right";</tag>
+      </item>
+      <item>
+        straight <tag> out = "Straight";</tag>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Ddir">
+    <one-of>
+      <item>
+        forward <tag> out = "Forward";</tag>
+      </item>
+      <item>
+        backward <tag> out = "Backward";</tag>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

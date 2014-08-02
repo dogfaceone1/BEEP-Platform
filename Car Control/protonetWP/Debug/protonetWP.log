@@ -1,0 +1,30 @@
+﻿Build started 5/18/2014 2:01:10 AM.
+     1>Project "C:\Users\Garrett\SkyDrive\ECE 499\Car Control\protonetWP\protonetWP.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /ZI /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\cond.cpp src\mutex.cpp src\protonet.cpp src\serial.cpp src\thread.cpp
+         thread.cpp
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\thread.cpp(16): error C3861: 'CreateThread': identifier not found
+         serial.cpp
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\serial.cpp(112): error C3861: 'CreateFileA': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\serial.cpp(128): error C3861: 'GetCommState': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\serial.cpp(135): error C3861: 'SetCommState': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\serial.cpp(149): error C3861: 'SetCommTimeouts': identifier not found
+         protonet.cpp
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\protonet.cpp(132): error C3861: '_sleep': identifier not found
+         mutex.cpp
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\mutex.cpp(34): error C3861: 'CreateMutex': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\mutex.cpp(42): error C3861: 'WaitForSingleObject': identifier not found
+         cond.cpp
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(8): error C3861: 'CreateSemaphore': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(12): error C3861: 'InitializeCriticalSection': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(13): error C3861: 'CreateEvent': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(41): error C3861: 'SignalObjectAndWait': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(59): error C3861: 'SignalObjectAndWait': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(63): error C3861: 'WaitForSingleObject': identifier not found
+     1>c:\users\garrett\skydrive\ece 499\car control\protonetwp\src\cond.cpp(89): error C3861: 'WaitForSingleObject': identifier not found
+         Generating Code...
+     1>Done Building Project "C:\Users\Garrett\SkyDrive\ECE 499\Car Control\protonetWP\protonetWP.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:07.04

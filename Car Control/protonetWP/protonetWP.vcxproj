@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{cf15da5a-c055-4f6f-b47f-2af0de1c632c}</ProjectGuid>
+    <RootNamespace>protonetWP</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\Garrett\SkyDrive\ECE 499\Car Control\protonetWP\include;$(IncludePath)</IncludePath>
+    <SourcePath>C:\Users\Garrett\SkyDrive\ECE 499\Car Control\protonetWP\src;C:\Users\Garrett\SkyDrive\ECE 499\Car Control\protonetWP\src\message;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>$(WindowsSDK_MetadataPath);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cond.h" />
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\datalink.h" />
+    <ClInclude Include="include\marshal.h" />
+    <ClInclude Include="include\message.h" />
+    <ClInclude Include="include\message\Enter.h" />
+    <ClInclude Include="include\message\Exit.h" />
+    <ClInclude Include="include\message\PayloadBayCommand.h" />
+    <ClInclude Include="include\message\PayloadBayModeCommand.h" />
+    <ClInclude Include="include\message\Ping.h" />
+    <ClInclude Include="include\message\Pong.h" />
+    <ClInclude Include="include\message\TargetDesignationCommand.h" />
+    <ClInclude Include="include\message\UGVBatteryStatus.h" />
+    <ClInclude Include="include\message\UGVJoystick.h" />
+    <ClInclude Include="include\message\VehicleAttitude.h" />
+    <ClInclude Include="include\message\VehicleAuthorizationReply.h" />
+    <ClInclude Include="include\message\VehicleAuthorizationRequest.h" />
+    <ClInclude Include="include\message\VehicleBodySensedState.h" />
+    <ClInclude Include="include\message\VehicleGlobalPosition.h" />
+    <ClInclude Include="include\message\VehicleGroundRelativeState.h" />
+    <ClInclude Include="include\message\VehicleIdentification.h" />
+    <ClInclude Include="include\message\VehicleInertialState.h" />
+    <ClInclude Include="include\message\VehicleModeCommand.h" />
+    <ClInclude Include="include\message\VehicleSystemStatus.h" />
+    <ClInclude Include="include\message\VehicleTelemetryCommand.h" />
+    <ClInclude Include="include\message\VehicleTerminationCommand.h" />
+    <ClInclude Include="include\message\VehicleWaypointCommand.h" />
+    <ClInclude Include="include\mutex.h" />
+    <ClInclude Include="include\protocol.h" />
+    <ClInclude Include="include\protonet.h" />
+    <ClInclude Include="include\protonet_parser.h" />
+    <ClInclude Include="include\queue.h" />
+    <ClInclude Include="include\serial.h" />
+    <ClInclude Include="include\thread.h" />
+    <ClInclude Include="include\udp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cond.cpp" />
+    <ClCompile Include="src\datalink.cpp" />
+    <ClCompile Include="src\marshal.cpp" />
+    <ClCompile Include="src\message.cpp" />
+    <ClCompile Include="src\message\Enter.cpp" />
+    <ClCompile Include="src\message\Exit.cpp" />
+    <ClCompile Include="src\message\PayloadBayCommand.cpp" />
+    <ClCompile Include="src\message\PayloadBayModeCommand.cpp" />
+    <ClCompile Include="src\message\Ping.cpp" />
+    <ClCompile Include="src\message\Pong.cpp" />
+    <ClCompile Include="src\message\TargetDesignationCommand.cpp" />
+    <ClCompile Include="src\message\UGVBatteryStatus.cpp" />
+    <ClCompile Include="src\message\UGVJoystick.cpp" />
+    <ClCompile Include="src\message\VehicleAttitude.cpp" />
+    <ClCompile Include="src\message\VehicleAuthorizationReply.cpp" />
+    <ClCompile Include="src\message\VehicleAuthorizationRequest.cpp" />
+    <ClCompile Include="src\message\VehicleBodySensedState.cpp" />
+    <ClCompile Include="src\message\VehicleGlobalPosition.cpp" />
+    <ClCompile Include="src\message\VehicleGroundRelativeState.cpp" />
+    <ClCompile Include="src\message\VehicleIdentification.cpp" />
+    <ClCompile Include="src\message\VehicleInertialState.cpp" />
+    <ClCompile Include="src\message\VehicleModeCommand.cpp" />
+    <ClCompile Include="src\message\VehicleSystemStatus.cpp" />
+    <ClCompile Include="src\message\VehicleTelemetryCommand.cpp" />
+    <ClCompile Include="src\message\VehicleTerminationCommand.cpp" />
+    <ClCompile Include="src\message\VehicleWaypointCommand.cpp" />
+    <ClCompile Include="src\mutex.cpp" />
+    <ClCompile Include="src\protocol.cpp" />
+    <ClCompile Include="src\protonet.cpp" />
+    <ClCompile Include="src\protonet_parser.cpp" />
+    <ClCompile Include="src\queue.cpp" />
+    <ClCompile Include="src\serial.cpp" />
+    <ClCompile Include="src\thread.cpp" />
+    <ClCompile Include="src\udp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Windows">
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
